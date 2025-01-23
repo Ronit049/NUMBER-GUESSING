@@ -17,7 +17,7 @@ Basic game logic and user interaction design.
 🚀 Why this project?
 This simple yet engaging program is an excellent way to practice core concepts of C programming while building a functional mini-project. Whether you're a student, hobbyist, or aspiring software developer, this game is a great addition to your coding portfolio.
 
-🔧 How to Use:
+🔧 How to Use: 
 
 Clone the repository.
 Compile the program using GCC or your favorite C compiler.
