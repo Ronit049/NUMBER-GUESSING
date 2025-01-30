@@ -23,3 +23,8 @@ Clone the repository.
 Compile the program using GCC or your favorite C compiler.
 Run the executable and start guessing!
 Feel free to explore, modify, and experiment with the code. Contributions and suggestions are always welcome. Let’s make coding fun together! 🌟
+📌 Features of this Code
+✔️ Generates a random number between 1 and 100.
+✔️ Stores the best score (least number of attempts) in a file (highscore.txt).
+✔️ Displays the high score before the game starts.
+✔️ Gives hints ("Too high" or "Too low") to guide the user.
