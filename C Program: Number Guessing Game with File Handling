@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define FILE_NAME "highscore.txt"
+
+// Function to save high score
+void saveHighScore(int attempts) {
+    FILE *file = fopen(FILE_NAME, "r");
+    int bestScore;
+
+    if (file == NULL) {
+        bestScore = attempts;  // First-time score
+    } else {
+        fscanf(file, "%d", &bestScore);
+        fclose(file);
+        if (attempts < bestScore) {
+            bestScore = attempts;  // Update best score
+        }
+    }
+
+    file = fopen(FILE_NAME, "w");
+    if (file != NULL) {
+        fprintf(file, "%d", bestScore);
+        fclose(file);
+    }
+}
+
+// Function to display the high score
+void displayHighScore() {
+    FILE *file = fopen(FILE_NAME, "r");
+    int bestScore;
+
+    if (file == NULL) {
+        printf("No high score yet!\n");
+    } else {
+        fscanf(file, "%d", &bestScore);
+        printf("🏆 High Score: %d attempts\n", bestScore);
+        fclose(file);
+    }
+}
+
+int main() {
+    int number, guess, attempts = 0;
+    
+    srand(time(0));
+    number = rand() % 100 + 1;  // Random number between 1-100
+
+    printf("🎮 Welcome to the Number Guessing Game!\n");
+    displayHighScore();
+
+    do {
+        printf("Enter your guess (1-100): ");
+        scanf("%d", &guess);
+        attempts++;
+
+        if (guess > number) {
+            printf("Too high! Try again.\n");
+        } else if (guess < number) {
+            printf("Too low! Try again.\n");
+        } else {
+            printf("🎉 Congratulations! You guessed it in %d attempts.\n", attempts);
+            saveHighScore(attempts);
+        }
+    } while (guess != number);
+
+    return 0;
+}
