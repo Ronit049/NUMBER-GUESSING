@@ -1,0 +1,2 @@
+gcc guessing_game.c -o guessing_game
+./guessing_game
