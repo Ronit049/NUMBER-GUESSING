@@ -28,3 +28,14 @@ Feel free to explore, modify, and experiment with the code. Contributions and su
 ✔️ Stores the best score (least number of attempts) in a file (highscore.txt).
 ✔️ Displays the high score before the game starts.
 ✔️ Gives hints ("Too high" or "Too low") to guide the user.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+A **Number Guessing Game** is a simple yet engaging C program that challenges players to guess a randomly generated number within a specified range. This game involves using the `rand()` function from the `<stdlib.h>` library to generate a random number, which the player must guess correctly. The program provides hints such as "Too high" or "Too low" based on the player's input, guiding them towards the correct answer. A `while` or `do-while` loop is commonly used to allow multiple attempts until the correct number is guessed. The game can also count the number of attempts taken and display it at the end. To make the game more interactive, additional features such as difficulty levels, a limited number of attempts, and score tracking can be added. Implementing functions to handle different aspects of the game, such as generating the random number, checking the player's guess, and displaying results, improves code readability and modularity. File handling can also be introduced to save high scores for competitive play. This project is a great way for beginners to practice concepts like loops, conditionals, functions, and basic user interaction in C. It helps improve logical thinking and problem-solving skills while making programming fun and interactive.
